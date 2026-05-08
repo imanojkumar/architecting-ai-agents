@@ -1,0 +1,91 @@
+% ============================================================
+%  preamble.tex — PDF LaTeX header for Architecting AI Agents
+%  Included via: include-in-header: style/preamble.tex
+% ============================================================
+
+% ----- Fonts ------------------------------------------------
+\usepackage{fontenc}        % T1 font encoding
+\usepackage{lmodern}        % Latin Modern — scalable CM replacement
+\usepackage{microtype}      % microtypography (better justification)
+
+% ----- Colour -----------------------------------------------
+\usepackage{xcolor}
+\definecolor{navy}{HTML}{1B2A4A}
+\definecolor{teal}{HTML}{0D7680}
+\definecolor{gold}{HTML}{C8972B}
+
+% ----- Hyperlinks -------------------------------------------
+% (Quarto sets hyperref; we only adjust colours here)
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = navy,
+  urlcolor   = teal,
+  citecolor  = teal
+}
+
+% ----- Chapter / Part styling (scrbook) --------------------
+\usepackage{titlesec}
+
+% Part title
+\titleformat{\part}[display]
+  {\normalfont\Huge\bfseries\color{navy}}
+  {\partname~\thepart}{20pt}{\Huge}
+
+% Chapter title
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{navy}}
+  {\chaptertitlename~\thechapter}{16pt}{\Huge}
+
+% Section
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{navy}}
+  {\thesection}{1em}{}
+
+% Subsection
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{teal}}
+  {\thesubsection}{1em}{}
+
+% ----- Code listings ----------------------------------------
+\usepackage{listings}
+\lstset{
+  basicstyle   = \ttfamily\small,
+  keywordstyle = \color{teal}\bfseries,
+  commentstyle = \color{gray}\itshape,
+  stringstyle  = \color{gold},
+  breaklines   = true,
+  frame        = leftline,
+  framerule    = 2pt,
+  rulecolor    = \color{teal},
+  showstringspaces = false
+}
+
+% ----- Callout / Note boxes ---------------------------------
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+\newtcolorbox{keyconcept}{
+  colback  = gold!8,
+  colframe = gold,
+  fonttitle = \bfseries,
+  title    = {💡 Key Concept},
+  breakable
+}
+
+\newtcolorbox{agentlab}{
+  colback  = teal!8,
+  colframe = teal,
+  fonttitle = \bfseries,
+  title    = {🧪 Agent Lab},
+  breakable
+}
+
+% ----- Miscellaneous ----------------------------------------
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{graphicx}       % figure inclusion (already loaded, but safe)
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf, labelsep=period}
+
+% ============================================================
+%  End of preamble.tex
+% ============================================================
