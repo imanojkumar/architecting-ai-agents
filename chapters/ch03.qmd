@@ -1,0 +1,5 @@
+---
+title: "Chapter 3: Agent Architectures — Patterns and Design Principles"
+---
+
+*Chapter content coming soon.*

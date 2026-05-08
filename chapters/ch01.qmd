@@ -1,0 +1,5 @@
+---
+title: "Chapter 1: Foundations — What Is an AI Agent?"
+---
+
+*Chapter content coming soon.*
