@@ -1,45 +1,47 @@
-/*-- Book colour palette --*/
-$navy: #1B2A4A;
-$teal: #0D7680;
-$gold: #C8972B;
-$grey: #5A5A5A;
+/*-- scss:defaults --*/
+
+// Book colour palette
+$navy:  #1B2A4A;
+$teal:  #0D7680;
+$gold:  #C8972B;
+$grey:  #5A5A5A;
 $lgrey: #F2F4F6;
 $white: #FFFFFF;
 
-/*-- Typography --*/
-$font-family-sans-serif: "Inter", "Segoe UI", sans-serif;
-$font-family-serif: "Georgia", "Times New Roman", serif;
-$font-family-monospace: "Fira Code", "Consolas", monospace;
-$font-size-root: 16px;
-$line-height-base: 1.7;
+// Typography
+$font-family-sans-serif:  "Inter", "Segoe UI", sans-serif;
+$font-family-serif:       "Georgia", "Times New Roman", serif;
+$font-family-monospace:   "Fira Code", "Consolas", monospace;
+$font-size-root:          16px;
+$line-height-base:        1.7;
 
-/*-- Navbar --*/
+// Navbar
 $navbar-bg: $navy;
 $navbar-fg: $white;
 $navbar-hl: $gold;
 
-/*-- Sidebar --*/
-$sidebar-bg: $lgrey;
-$sidebar-fg: $navy;
-$sidebar-hl: $teal;
+// Sidebar
+$sidebar-bg:           $lgrey;
+$sidebar-fg:           $navy;
+$sidebar-hl:           $teal;
 $sidebar-border-color: #D0D6DE;
 
-/*-- Body --*/
-$body-color: $grey;
-$body-bg: $white;
-$link-color: $teal;
+// Body
+$body-color:      $grey;
+$body-bg:         $white;
+$link-color:      $teal;
 $link-hover-color: $navy;
 
-/*-- Headings --*/
-$headings-color: $navy;
+// Headings
+$headings-color:       $navy;
 $headings-font-weight: 700;
-$h1-font-size: 2rem;
-$h2-font-size: 1.55rem;
-$h3-font-size: 1.25rem;
+$h1-font-size:         2rem;
+$h2-font-size:         1.55rem;
+$h3-font-size:         1.25rem;
 
-/*== QUARTO OVERRIDES ==================================================*/
+/*-- scss:rules --*/
 
-/*-- Chapter title banner --*/
+// Chapter title banner
 .quarto-title-banner {
     background-color: $navy !important;
     color: $white !important;
@@ -57,7 +59,7 @@ $h3-font-size: 1.25rem;
     font-style: italic;
 }
 
-/*-- TOC sidebar --*/
+// TOC sidebar
 #quarto-sidebar {
     font-size: 0.88rem;
 }
@@ -66,12 +68,12 @@ $h3-font-size: 1.25rem;
     color: $navy;
 }
 
-#quarto-sidebar .active>.sidebar-item-text {
+#quarto-sidebar .active > .sidebar-item-text {
     color: $teal;
     font-weight: 600;
 }
 
-/*-- Part headings in sidebar --*/
+// Part headings in sidebar
 .sidebar-section .sidebar-item-text {
     font-weight: 700;
     color: $navy;
@@ -80,7 +82,7 @@ $h3-font-size: 1.25rem;
     letter-spacing: 0.06em;
 }
 
-/*-- Page TOC (right margin) --*/
+// Page TOC (right margin)
 #quarto-margin-sidebar .toc-title {
     color: $gold;
     font-weight: 700;
@@ -89,7 +91,7 @@ $h3-font-size: 1.25rem;
     letter-spacing: 0.08em;
 }
 
-/*-- Code blocks --*/
+// Code blocks
 pre.sourceCode {
     border-left: 3px solid $teal;
     border-radius: 4px;
@@ -102,7 +104,7 @@ code {
     font-size: 0.9em;
 }
 
-/*-- Figures --*/
+// Figures
 figure figcaption {
     font-style: italic;
     color: #888;
@@ -111,72 +113,64 @@ figure figcaption {
     margin-top: 0.5rem;
 }
 
-/*=====================================================================
-   CALLOUT CUSTOMISATION
-   Four custom callout types used throughout the book
-=====================================================================*/
+// =====================================================================
+//  CALLOUT CUSTOMISATION
+//  Four custom callout types used throughout the book
+// =====================================================================
 
-/*-- 1. Researcher's Corner (blue-navy) --*/
+// 1. Researcher's Corner (navy)
 div.callout-note {
     border-left-color: $navy !important;
 }
-
 div.callout-note .callout-title {
     background-color: rgba(27, 42, 74, 0.08) !important;
     color: $navy !important;
     font-weight: 700;
 }
-
 div.callout-note .callout-title::before {
     content: "🔬  ";
 }
 
-/*-- 2. Common Pitfalls (red-warm) --*/
+// 2. Common Pitfalls (red-warm)
 div.callout-warning {
     border-left-color: #C0392B !important;
 }
-
 div.callout-warning .callout-title {
     background-color: rgba(192, 57, 43, 0.07) !important;
     color: #C0392B !important;
     font-weight: 700;
 }
-
 div.callout-warning .callout-title::before {
     content: "⚠️  ";
 }
 
-/*-- 3. Agent Lab (teal) --*/
+// 3. Agent Lab (teal)
 div.callout-tip {
     border-left-color: $teal !important;
 }
-
 div.callout-tip .callout-title {
     background-color: rgba(13, 118, 128, 0.08) !important;
     color: $teal !important;
     font-weight: 700;
 }
-
 div.callout-tip .callout-title::before {
     content: "🧪  ";
 }
 
-/*-- 4. Key Concept (gold) --*/
+// 4. Key Concept (gold)
 div.callout-important {
     border-left-color: $gold !important;
 }
-
 div.callout-important .callout-title {
     background-color: rgba(200, 151, 43, 0.08) !important;
     color: darken($gold, 10%) !important;
     font-weight: 700;
 }
-
 div.callout-important .callout-title::before {
     content: "💡  ";
 }
 
-/*-- Chapter summary box --*/
+// Chapter summary box
 .chapter-summary {
     background-color: $lgrey;
     border-top: 3px solid $gold;
@@ -186,16 +180,184 @@ div.callout-important .callout-title::before {
     font-size: 0.95rem;
 }
 
-/*-- Key terms inline --*/
+// Key terms inline
 .key-term {
     color: $teal;
     font-weight: 600;
 }
 
-/*-- Footer --*/
+// Footer
 .nav-footer {
     background-color: $lgrey;
     border-top: 2px solid #D0D6DE;
     font-size: 0.85rem;
     color: $grey;
+}
+
+// =====================================================================
+//  LAYOUT — Sidebar flush left, no outer gutters
+// =====================================================================
+
+// Remove any left gap before the sidebar
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#quarto-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+// Sidebar: full-height, flush to viewport left edge
+#quarto-sidebar {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    left: 0 !important;
+    border-right: 1px solid $sidebar-border-color;
+}
+
+// Remove Bootstrap container gutters that push sidebar inward
+.quarto-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+// =====================================================================
+//  RIGHT MARGIN TOC — flush right, text wrapping, consistent colours
+// =====================================================================
+
+#quarto-margin-sidebar {
+    padding-left: 0.75rem;
+    padding-right: 0.5rem;
+}
+
+// All TOC links — uniform navy colour, wrap long text
+#quarto-margin-sidebar nav a,
+#quarto-margin-sidebar .toc-active-item a {
+    color: $navy;
+    white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    display: block;
+    line-height: 1.4;
+    padding: 0.1rem 0;
+}
+
+#quarto-margin-sidebar nav a:hover {
+    color: $teal;
+    text-decoration: none;
+}
+
+// Section numbers — same navy, not greyed out
+.toc-section-number {
+    color: $navy !important;
+    font-weight: 500;
+    margin-right: 0.3em;
+}
+
+// Active TOC item
+#quarto-margin-sidebar .active > a {
+    color: $teal !important;
+    font-weight: 600;
+}
+
+// =====================================================================
+//  SIDEBAR LEFT NAV — consistent number colours
+// =====================================================================
+
+// Chapter numbers in left sidebar — match body colour, not grey
+#quarto-sidebar .sidebar-item-text .chapter-number,
+#quarto-sidebar .chapter-number {
+    color: $navy !important;
+    opacity: 1 !important;
+}
+
+// All sidebar nav links — consistent
+#quarto-sidebar .sidebar-item a {
+    color: $navy;
+}
+
+#quarto-sidebar .sidebar-item a:hover {
+    color: $teal;
+}
+
+// =====================================================================
+//  FOOTER — consistent across all pages
+// =====================================================================
+
+.nav-footer {
+    background-color: $lgrey !important;
+    border-top: 2px solid #D0D6DE !important;
+    font-size: 0.85rem !important;
+    color: $grey !important;
+    width: 100% !important;
+    padding: 0.75rem 1.5rem !important;
+}
+
+// Footer navigation links (prev/next chapter) — fix "preface.html" display
+.nav-footer .nav-footer-left,
+.nav-footer .nav-footer-center,
+.nav-footer .nav-footer-right {
+    color: $grey;
+    font-size: 0.85rem;
+}
+
+// Page navigation (prev/next) at bottom — fix filename display issue
+.page-navigation .nav-page a {
+    color: $teal;
+}
+
+// =====================================================================
+//  RESPONSIVE — TV, Desktop, Laptop, Tablet, Mobile
+// =====================================================================
+
+// Large TV / 4K screens (≥ 1920px)
+@media (min-width: 1920px) {
+    #quarto-sidebar {
+        width: 280px !important;
+    }
+    .quarto-container {
+        max-width: 100% !important;
+    }
+}
+
+// Standard Desktop (1280px – 1919px): default, no override needed
+
+// Laptop (1024px – 1279px)
+@media (max-width: 1279px) and (min-width: 1024px) {
+    #quarto-margin-sidebar {
+        padding-right: 0.25rem;
+    }
+}
+
+// Tablet (768px – 1023px): hide right margin sidebar
+@media (max-width: 1023px) and (min-width: 768px) {
+    #quarto-margin-sidebar {
+        display: none !important;
+    }
+    .quarto-container {
+        padding: 0 0.5rem !important;
+    }
+}
+
+// Mobile (< 768px): full width, sidebar collapses to drawer
+@media (max-width: 767px) {
+    #quarto-sidebar {
+        width: 100% !important;
+    }
+    #quarto-margin-sidebar {
+        display: none !important;
+    }
+    .quarto-container {
+        padding: 0 0.5rem !important;
+    }
+    pre.sourceCode {
+        font-size: 0.8rem;
+    }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; }
 }
