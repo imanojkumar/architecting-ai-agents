@@ -1,0 +1,110 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Architecting AI Agents"
+  subtitle: "A Practitioner's Guide from Purpose to Production"
+  author: "Manoj Kumar"
+  date: "2025"
+  date-format: "YYYY"
+  
+  repo-url: https://github.com/imanojkumar/architecting-ai-agents
+  repo-actions: [edit, issue, source]
+  
+  sharing: [twitter, linkedin]
+  
+  sidebar:
+    logo: "style/logo.png"   # add your logo/avatar here later
+    search: true
+    
+  page-footer:
+    left: |
+      © 2025 Manoj Kumar — *Architecting AI Agents*
+    right: |
+      Built with [Quarto](https://quarto.org)
+
+  chapters:
+    - index.qmd
+    - preface.qmd
+    
+    - part: "**Part I — Foundations**"
+      chapters:
+        - chapters/ch01.qmd
+        - chapters/ch02.qmd
+        - chapters/ch03.qmd
+    
+    - part: "**Part II — Building**"
+      chapters:
+        - chapters/ch04.qmd
+        - chapters/ch05.qmd
+        - chapters/ch06.qmd
+    
+    - part: "**Part III — Deploying & Sustaining**"
+      chapters:
+        - chapters/ch07.qmd
+        - chapters/ch08.qmd
+        - chapters/ch09.qmd
+    
+    - part: "**Part IV — Responsibility & Frontiers**"
+      chapters:
+        - chapters/ch10.qmd
+        - chapters/ch11.qmd
+    
+    - part: "**Appendices**"
+      chapters:
+        - appendices/appendix-a.qmd
+        - appendices/appendix-b.qmd
+        - appendices/appendix-c.qmd
+        - appendices/appendix-d.qmd
+        - appendices/appendix-e.qmd
+
+bibliography: references.bib
+csl: style/apa.csl        # download APA CSL from zotero.org/styles
+
+format:
+  html:
+    theme:
+      light: [cosmo, style/custom.scss]
+    code-link: true
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 3
+    toc-title: "In This Chapter"
+    number-sections: true
+    number-depth: 3
+    fig-align: center
+    callout-appearance: simple
+    link-external-icon: true
+    link-external-newwindow: true
+    grid:
+      sidebar-width: 280px
+      body-width: 800px
+      margin-width: 300px
+    
+  pdf:
+    documentclass: scrbook
+    classoption: [oneside]
+    papersize: a4
+    fontsize: 11pt
+    linestretch: 1.4
+    geometry:
+      - top=30mm
+      - left=30mm
+      - right=25mm
+      - bottom=30mm
+    include-in-header: style/preamble.tex
+    toc: true
+    toc-depth: 2
+    lof: true          # list of figures
+    lot: true          # list of tables
+    colorlinks: true
+    linkcolor: "0D7680"
+    urlcolor: "0D7680"
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  freeze: auto         # only re-renders changed files

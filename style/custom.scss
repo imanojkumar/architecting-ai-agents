@@ -1,0 +1,201 @@
+/*-- Book colour palette --*/
+$navy: #1B2A4A;
+$teal: #0D7680;
+$gold: #C8972B;
+$grey: #5A5A5A;
+$lgrey: #F2F4F6;
+$white: #FFFFFF;
+
+/*-- Typography --*/
+$font-family-sans-serif: "Inter", "Segoe UI", sans-serif;
+$font-family-serif: "Georgia", "Times New Roman", serif;
+$font-family-monospace: "Fira Code", "Consolas", monospace;
+$font-size-root: 16px;
+$line-height-base: 1.7;
+
+/*-- Navbar --*/
+$navbar-bg: $navy;
+$navbar-fg: $white;
+$navbar-hl: $gold;
+
+/*-- Sidebar --*/
+$sidebar-bg: $lgrey;
+$sidebar-fg: $navy;
+$sidebar-hl: $teal;
+$sidebar-border-color: #D0D6DE;
+
+/*-- Body --*/
+$body-color: $grey;
+$body-bg: $white;
+$link-color: $teal;
+$link-hover-color: $navy;
+
+/*-- Headings --*/
+$headings-color: $navy;
+$headings-font-weight: 700;
+$h1-font-size: 2rem;
+$h2-font-size: 1.55rem;
+$h3-font-size: 1.25rem;
+
+/*== QUARTO OVERRIDES ==================================================*/
+
+/*-- Chapter title banner --*/
+.quarto-title-banner {
+    background-color: $navy !important;
+    color: $white !important;
+    padding: 3rem 2rem;
+    border-bottom: 4px solid $gold;
+}
+
+.quarto-title-banner h1.title {
+    color: $white !important;
+    font-size: 2.2rem;
+}
+
+.quarto-title-banner p.subtitle {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-style: italic;
+}
+
+/*-- TOC sidebar --*/
+#quarto-sidebar {
+    font-size: 0.88rem;
+}
+
+#quarto-sidebar .sidebar-item-text {
+    color: $navy;
+}
+
+#quarto-sidebar .active>.sidebar-item-text {
+    color: $teal;
+    font-weight: 600;
+}
+
+/*-- Part headings in sidebar --*/
+.sidebar-section .sidebar-item-text {
+    font-weight: 700;
+    color: $navy;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/*-- Page TOC (right margin) --*/
+#quarto-margin-sidebar .toc-title {
+    color: $gold;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/*-- Code blocks --*/
+pre.sourceCode {
+    border-left: 3px solid $teal;
+    border-radius: 4px;
+    background-color: #F7F9FB;
+    font-size: 0.875rem;
+}
+
+code {
+    color: $teal;
+    font-size: 0.9em;
+}
+
+/*-- Figures --*/
+figure figcaption {
+    font-style: italic;
+    color: #888;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/*=====================================================================
+   CALLOUT CUSTOMISATION
+   Four custom callout types used throughout the book
+=====================================================================*/
+
+/*-- 1. Researcher's Corner (blue-navy) --*/
+div.callout-note {
+    border-left-color: $navy !important;
+}
+
+div.callout-note .callout-title {
+    background-color: rgba(27, 42, 74, 0.08) !important;
+    color: $navy !important;
+    font-weight: 700;
+}
+
+div.callout-note .callout-title::before {
+    content: "🔬  ";
+}
+
+/*-- 2. Common Pitfalls (red-warm) --*/
+div.callout-warning {
+    border-left-color: #C0392B !important;
+}
+
+div.callout-warning .callout-title {
+    background-color: rgba(192, 57, 43, 0.07) !important;
+    color: #C0392B !important;
+    font-weight: 700;
+}
+
+div.callout-warning .callout-title::before {
+    content: "⚠️  ";
+}
+
+/*-- 3. Agent Lab (teal) --*/
+div.callout-tip {
+    border-left-color: $teal !important;
+}
+
+div.callout-tip .callout-title {
+    background-color: rgba(13, 118, 128, 0.08) !important;
+    color: $teal !important;
+    font-weight: 700;
+}
+
+div.callout-tip .callout-title::before {
+    content: "🧪  ";
+}
+
+/*-- 4. Key Concept (gold) --*/
+div.callout-important {
+    border-left-color: $gold !important;
+}
+
+div.callout-important .callout-title {
+    background-color: rgba(200, 151, 43, 0.08) !important;
+    color: darken($gold, 10%) !important;
+    font-weight: 700;
+}
+
+div.callout-important .callout-title::before {
+    content: "💡  ";
+}
+
+/*-- Chapter summary box --*/
+.chapter-summary {
+    background-color: $lgrey;
+    border-top: 3px solid $gold;
+    border-radius: 4px;
+    padding: 1.2rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+}
+
+/*-- Key terms inline --*/
+.key-term {
+    color: $teal;
+    font-weight: 600;
+}
+
+/*-- Footer --*/
+.nav-footer {
+    background-color: $lgrey;
+    border-top: 2px solid #D0D6DE;
+    font-size: 0.85rem;
+    color: $grey;
+}
