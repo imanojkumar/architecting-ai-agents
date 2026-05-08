@@ -76,7 +76,7 @@ architecting-ai-agents/
 Clone the repository and render the book:
 
 ```bash
-git clone https://github.com/<your-username>/architecting-ai-agents.git
+git clone https://github.com/imanojkumar/architecting-ai-agents.git
 cd architecting-ai-agents
 
 # Render to HTML
